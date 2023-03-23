@@ -86,6 +86,7 @@ type BlockAttestationResponse struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Type:
+	//
 	//	*BlockAttestationResponse_Status
 	//	*BlockAttestationResponse_BlockAttestation
 	Type isBlockAttestationResponse_Type `protobuf_oneof:"Type"`
