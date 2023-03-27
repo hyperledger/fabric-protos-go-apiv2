@@ -101,6 +101,7 @@ type FilteredTransaction struct {
 	Type             common.HeaderType `protobuf:"varint,2,opt,name=type,proto3,enum=common.HeaderType" json:"type,omitempty"`
 	TxValidationCode TxValidationCode  `protobuf:"varint,3,opt,name=tx_validation_code,json=txValidationCode,proto3,enum=protos.TxValidationCode" json:"tx_validation_code,omitempty"`
 	// Types that are assignable to Data:
+	//
 	//	*FilteredTransaction_TransactionActions
 	Data isFilteredTransaction_Data `protobuf_oneof:"Data"`
 }
@@ -344,6 +345,7 @@ type DeliverResponse struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Type:
+	//
 	//	*DeliverResponse_Status
 	//	*DeliverResponse_Block
 	//	*DeliverResponse_FilteredBlock

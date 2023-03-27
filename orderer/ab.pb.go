@@ -354,6 +354,7 @@ type SeekPosition struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Type:
+	//
 	//	*SeekPosition_Newest
 	//	*SeekPosition_Oldest
 	//	*SeekPosition_Specified
@@ -537,6 +538,7 @@ type DeliverResponse struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Type:
+	//
 	//	*DeliverResponse_Status
 	//	*DeliverResponse_Block
 	Type isDeliverResponse_Type `protobuf_oneof:"Type"`

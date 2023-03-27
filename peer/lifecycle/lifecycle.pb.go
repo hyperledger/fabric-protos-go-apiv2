@@ -554,6 +554,7 @@ type ChaincodeSource struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Type:
+	//
 	//	*ChaincodeSource_Unavailable_
 	//	*ChaincodeSource_LocalPackage
 	Type isChaincodeSource_Type `protobuf_oneof:"Type"`

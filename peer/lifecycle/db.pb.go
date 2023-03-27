@@ -89,6 +89,7 @@ type StateData struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Type:
+	//
 	//	*StateData_Int64
 	//	*StateData_Bytes
 	//	*StateData_String_

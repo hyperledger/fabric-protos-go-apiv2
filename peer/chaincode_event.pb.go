@@ -24,8 +24,8 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-//ChaincodeEvent is used for events and registrations that are specific to chaincode
-//string type - "chaincode"
+// ChaincodeEvent is used for events and registrations that are specific to chaincode
+// string type - "chaincode"
 type ChaincodeEvent struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

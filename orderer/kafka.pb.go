@@ -81,6 +81,7 @@ type KafkaMessage struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Type:
+	//
 	//	*KafkaMessage_Regular
 	//	*KafkaMessage_TimeToCut
 	//	*KafkaMessage_Connect

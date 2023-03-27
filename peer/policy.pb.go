@@ -33,6 +33,7 @@ type ApplicationPolicy struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Type:
+	//
 	//	*ApplicationPolicy_SignaturePolicy
 	//	*ApplicationPolicy_ChannelConfigPolicyReference
 	Type isApplicationPolicy_Type `protobuf_oneof:"Type"`

@@ -97,9 +97,10 @@ type ChaincodeInfo struct {
 	Vscc string `protobuf:"bytes,6,opt,name=vscc,proto3" json:"vscc,omitempty"`
 	// the chaincode unique id.
 	// computed as: H(
-	//                H(name || version) ||
-	//                H(CodePackage)
-	//              )
+	//
+	//	  H(name || version) ||
+	//	  H(CodePackage)
+	//	)
 	Id []byte `protobuf:"bytes,7,opt,name=id,proto3" json:"id,omitempty"`
 }
 

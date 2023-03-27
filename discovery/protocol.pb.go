@@ -270,6 +270,7 @@ type Query struct {
 
 	Channel string `protobuf:"bytes,1,opt,name=channel,proto3" json:"channel,omitempty"`
 	// Types that are assignable to Query:
+	//
 	//	*Query_ConfigQuery
 	//	*Query_PeerQuery
 	//	*Query_CcQuery
@@ -400,6 +401,7 @@ type QueryResult struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Result:
+	//
 	//	*QueryResult_Error
 	//	*QueryResult_ConfigResult
 	//	*QueryResult_CcQueryRes
@@ -849,13 +851,13 @@ func (*LocalPeerQuery) Descriptor() ([]byte, []int) {
 // Here is how to compute a set of peers to ask an endorsement from, given an EndorsementDescriptor:
 // Let e: G --> P be the endorsers_by_groups field that maps a group to a set of peers.
 // Note that applying e on a group g yields a set of peers.
-// 1) Select a layout l: G --> N out of the layouts given.
-//    l is the quantities_by_group field of a Layout, and it maps a group to an integer.
-// 2) R = {}  (an empty set of peers)
-// 3) For each group g in the layout l, compute n = l(g)
-//    3.1) Denote P_g as a set of n random peers {p0, p1, ... p_n} selected from e(g)
-//    3.2) R = R U P_g  (add P_g to R)
-// 4) The set of peers R is the peers the client needs to request endorsements from
+//  1. Select a layout l: G --> N out of the layouts given.
+//     l is the quantities_by_group field of a Layout, and it maps a group to an integer.
+//  2. R = {}  (an empty set of peers)
+//  3. For each group g in the layout l, compute n = l(g)
+//     3.1) Denote P_g as a set of n random peers {p0, p1, ... p_n} selected from e(g)
+//     3.2) R = R U P_g  (add P_g to R)
+//  4. The set of peers R is the peers the client needs to request endorsements from
 type EndorsementDescriptor struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

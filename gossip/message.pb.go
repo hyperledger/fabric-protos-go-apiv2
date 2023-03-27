@@ -268,6 +268,7 @@ type Secret struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Content:
+	//
 	//	*Secret_InternalEndpoint
 	Content isSecret_Content `protobuf_oneof:"content"`
 }
@@ -345,6 +346,7 @@ type GossipMessage struct {
 	// to forward the message
 	Tag GossipMessage_Tag `protobuf:"varint,3,opt,name=tag,proto3,enum=gossip.GossipMessage_Tag" json:"tag,omitempty"`
 	// Types that are assignable to Content:
+	//
 	//	*GossipMessage_AliveMsg
 	//	*GossipMessage_MemReq
 	//	*GossipMessage_MemRes
@@ -642,7 +644,7 @@ type GossipMessage_StateInfoPullReq struct {
 }
 
 type GossipMessage_StateRequest struct {
-	//  Used to ask from a remote peer a set of blocks
+	// Used to ask from a remote peer a set of blocks
 	StateRequest *RemoteStateRequest `protobuf:"bytes,18,opt,name=state_request,json=stateRequest,proto3,oneof"`
 }
 
