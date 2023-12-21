@@ -1144,6 +1144,95 @@ func (x *QueryApprovedChaincodeDefinitionResult) GetSource() *ChaincodeSource {
 	return nil
 }
 
+// QueryApprovedChaincodeDefinitionsArgs is the message used as arguments to
+// `_lifecycle.QueryApprovedChaincodeDefinitions`.
+type QueryApprovedChaincodeDefinitionsArgs struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *QueryApprovedChaincodeDefinitionsArgs) Reset() {
+	*x = QueryApprovedChaincodeDefinitionsArgs{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[17]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *QueryApprovedChaincodeDefinitionsArgs) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*QueryApprovedChaincodeDefinitionsArgs) ProtoMessage() {}
+
+func (x *QueryApprovedChaincodeDefinitionsArgs) ProtoReflect() protoreflect.Message {
+	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[17]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use QueryApprovedChaincodeDefinitionsArgs.ProtoReflect.Descriptor instead.
+func (*QueryApprovedChaincodeDefinitionsArgs) Descriptor() ([]byte, []int) {
+	return file_peer_lifecycle_lifecycle_proto_rawDescGZIP(), []int{17}
+}
+
+// QueryApprovedChaincodeDefinitionsResult is the message returned by
+// `_lifecycle.QueryApprovedChaincodeDefinitions`.
+type QueryApprovedChaincodeDefinitionsResult struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	ApprovedChaincodeDefinitions []*QueryApprovedChaincodeDefinitionsResult_ApprovedChaincodeDefinition `protobuf:"bytes,1,rep,name=approved_chaincode_definitions,json=approvedChaincodeDefinitions,proto3" json:"approved_chaincode_definitions,omitempty"`
+}
+
+func (x *QueryApprovedChaincodeDefinitionsResult) Reset() {
+	*x = QueryApprovedChaincodeDefinitionsResult{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[18]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *QueryApprovedChaincodeDefinitionsResult) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*QueryApprovedChaincodeDefinitionsResult) ProtoMessage() {}
+
+func (x *QueryApprovedChaincodeDefinitionsResult) ProtoReflect() protoreflect.Message {
+	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[18]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use QueryApprovedChaincodeDefinitionsResult.ProtoReflect.Descriptor instead.
+func (*QueryApprovedChaincodeDefinitionsResult) Descriptor() ([]byte, []int) {
+	return file_peer_lifecycle_lifecycle_proto_rawDescGZIP(), []int{18}
+}
+
+func (x *QueryApprovedChaincodeDefinitionsResult) GetApprovedChaincodeDefinitions() []*QueryApprovedChaincodeDefinitionsResult_ApprovedChaincodeDefinition {
+	if x != nil {
+		return x.ApprovedChaincodeDefinitions
+	}
+	return nil
+}
+
 // QueryChaincodeDefinitionArgs is the message used as arguments to
 // `_lifecycle.QueryChaincodeDefinition`.
 type QueryChaincodeDefinitionArgs struct {
@@ -1157,7 +1246,7 @@ type QueryChaincodeDefinitionArgs struct {
 func (x *QueryChaincodeDefinitionArgs) Reset() {
 	*x = QueryChaincodeDefinitionArgs{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[17]
+		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[19]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1170,7 +1259,7 @@ func (x *QueryChaincodeDefinitionArgs) String() string {
 func (*QueryChaincodeDefinitionArgs) ProtoMessage() {}
 
 func (x *QueryChaincodeDefinitionArgs) ProtoReflect() protoreflect.Message {
-	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[17]
+	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[19]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1183,7 +1272,7 @@ func (x *QueryChaincodeDefinitionArgs) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use QueryChaincodeDefinitionArgs.ProtoReflect.Descriptor instead.
 func (*QueryChaincodeDefinitionArgs) Descriptor() ([]byte, []int) {
-	return file_peer_lifecycle_lifecycle_proto_rawDescGZIP(), []int{17}
+	return file_peer_lifecycle_lifecycle_proto_rawDescGZIP(), []int{19}
 }
 
 func (x *QueryChaincodeDefinitionArgs) GetName() string {
@@ -1213,7 +1302,7 @@ type QueryChaincodeDefinitionResult struct {
 func (x *QueryChaincodeDefinitionResult) Reset() {
 	*x = QueryChaincodeDefinitionResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[18]
+		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[20]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1226,7 +1315,7 @@ func (x *QueryChaincodeDefinitionResult) String() string {
 func (*QueryChaincodeDefinitionResult) ProtoMessage() {}
 
 func (x *QueryChaincodeDefinitionResult) ProtoReflect() protoreflect.Message {
-	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[18]
+	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[20]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1239,7 +1328,7 @@ func (x *QueryChaincodeDefinitionResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use QueryChaincodeDefinitionResult.ProtoReflect.Descriptor instead.
 func (*QueryChaincodeDefinitionResult) Descriptor() ([]byte, []int) {
-	return file_peer_lifecycle_lifecycle_proto_rawDescGZIP(), []int{18}
+	return file_peer_lifecycle_lifecycle_proto_rawDescGZIP(), []int{20}
 }
 
 func (x *QueryChaincodeDefinitionResult) GetSequence() int64 {
@@ -1309,7 +1398,7 @@ type QueryChaincodeDefinitionsArgs struct {
 func (x *QueryChaincodeDefinitionsArgs) Reset() {
 	*x = QueryChaincodeDefinitionsArgs{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[19]
+		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[21]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1322,7 +1411,7 @@ func (x *QueryChaincodeDefinitionsArgs) String() string {
 func (*QueryChaincodeDefinitionsArgs) ProtoMessage() {}
 
 func (x *QueryChaincodeDefinitionsArgs) ProtoReflect() protoreflect.Message {
-	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[19]
+	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[21]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1335,7 +1424,7 @@ func (x *QueryChaincodeDefinitionsArgs) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use QueryChaincodeDefinitionsArgs.ProtoReflect.Descriptor instead.
 func (*QueryChaincodeDefinitionsArgs) Descriptor() ([]byte, []int) {
-	return file_peer_lifecycle_lifecycle_proto_rawDescGZIP(), []int{19}
+	return file_peer_lifecycle_lifecycle_proto_rawDescGZIP(), []int{21}
 }
 
 // QueryChaincodeDefinitionsResult is the message returned by
@@ -1351,7 +1440,7 @@ type QueryChaincodeDefinitionsResult struct {
 func (x *QueryChaincodeDefinitionsResult) Reset() {
 	*x = QueryChaincodeDefinitionsResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[20]
+		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[22]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1364,7 +1453,7 @@ func (x *QueryChaincodeDefinitionsResult) String() string {
 func (*QueryChaincodeDefinitionsResult) ProtoMessage() {}
 
 func (x *QueryChaincodeDefinitionsResult) ProtoReflect() protoreflect.Message {
-	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[20]
+	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[22]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1377,7 +1466,7 @@ func (x *QueryChaincodeDefinitionsResult) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use QueryChaincodeDefinitionsResult.ProtoReflect.Descriptor instead.
 func (*QueryChaincodeDefinitionsResult) Descriptor() ([]byte, []int) {
-	return file_peer_lifecycle_lifecycle_proto_rawDescGZIP(), []int{20}
+	return file_peer_lifecycle_lifecycle_proto_rawDescGZIP(), []int{22}
 }
 
 func (x *QueryChaincodeDefinitionsResult) GetChaincodeDefinitions() []*QueryChaincodeDefinitionsResult_ChaincodeDefinition {
@@ -1398,7 +1487,7 @@ type QueryInstalledChaincodeResult_References struct {
 func (x *QueryInstalledChaincodeResult_References) Reset() {
 	*x = QueryInstalledChaincodeResult_References{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[22]
+		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[24]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1411,7 +1500,7 @@ func (x *QueryInstalledChaincodeResult_References) String() string {
 func (*QueryInstalledChaincodeResult_References) ProtoMessage() {}
 
 func (x *QueryInstalledChaincodeResult_References) ProtoReflect() protoreflect.Message {
-	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[22]
+	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[24]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1446,7 +1535,7 @@ type QueryInstalledChaincodeResult_Chaincode struct {
 func (x *QueryInstalledChaincodeResult_Chaincode) Reset() {
 	*x = QueryInstalledChaincodeResult_Chaincode{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[23]
+		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[25]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1459,7 +1548,7 @@ func (x *QueryInstalledChaincodeResult_Chaincode) String() string {
 func (*QueryInstalledChaincodeResult_Chaincode) ProtoMessage() {}
 
 func (x *QueryInstalledChaincodeResult_Chaincode) ProtoReflect() protoreflect.Message {
-	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[23]
+	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[25]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1502,7 +1591,7 @@ type QueryInstalledChaincodesResult_InstalledChaincode struct {
 func (x *QueryInstalledChaincodesResult_InstalledChaincode) Reset() {
 	*x = QueryInstalledChaincodesResult_InstalledChaincode{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[24]
+		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[26]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1515,7 +1604,7 @@ func (x *QueryInstalledChaincodesResult_InstalledChaincode) String() string {
 func (*QueryInstalledChaincodesResult_InstalledChaincode) ProtoMessage() {}
 
 func (x *QueryInstalledChaincodesResult_InstalledChaincode) ProtoReflect() protoreflect.Message {
-	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[24]
+	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[26]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1563,7 +1652,7 @@ type QueryInstalledChaincodesResult_References struct {
 func (x *QueryInstalledChaincodesResult_References) Reset() {
 	*x = QueryInstalledChaincodesResult_References{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[25]
+		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[27]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1576,7 +1665,7 @@ func (x *QueryInstalledChaincodesResult_References) String() string {
 func (*QueryInstalledChaincodesResult_References) ProtoMessage() {}
 
 func (x *QueryInstalledChaincodesResult_References) ProtoReflect() protoreflect.Message {
-	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[25]
+	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[27]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1611,7 +1700,7 @@ type QueryInstalledChaincodesResult_Chaincode struct {
 func (x *QueryInstalledChaincodesResult_Chaincode) Reset() {
 	*x = QueryInstalledChaincodesResult_Chaincode{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[26]
+		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[28]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1624,7 +1713,7 @@ func (x *QueryInstalledChaincodesResult_Chaincode) String() string {
 func (*QueryInstalledChaincodesResult_Chaincode) ProtoMessage() {}
 
 func (x *QueryInstalledChaincodesResult_Chaincode) ProtoReflect() protoreflect.Message {
-	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[26]
+	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[28]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1663,7 +1752,7 @@ type ChaincodeSource_Unavailable struct {
 func (x *ChaincodeSource_Unavailable) Reset() {
 	*x = ChaincodeSource_Unavailable{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[28]
+		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[30]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1676,7 +1765,7 @@ func (x *ChaincodeSource_Unavailable) String() string {
 func (*ChaincodeSource_Unavailable) ProtoMessage() {}
 
 func (x *ChaincodeSource_Unavailable) ProtoReflect() protoreflect.Message {
-	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[28]
+	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[30]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1703,7 +1792,7 @@ type ChaincodeSource_Local struct {
 func (x *ChaincodeSource_Local) Reset() {
 	*x = ChaincodeSource_Local{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[29]
+		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[31]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1716,7 +1805,7 @@ func (x *ChaincodeSource_Local) String() string {
 func (*ChaincodeSource_Local) ProtoMessage() {}
 
 func (x *ChaincodeSource_Local) ProtoReflect() protoreflect.Message {
-	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[29]
+	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[31]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1750,7 +1839,7 @@ type CheckCommitReadinessResult_Mismatches struct {
 func (x *CheckCommitReadinessResult_Mismatches) Reset() {
 	*x = CheckCommitReadinessResult_Mismatches{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[31]
+		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[33]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1763,7 +1852,7 @@ func (x *CheckCommitReadinessResult_Mismatches) String() string {
 func (*CheckCommitReadinessResult_Mismatches) ProtoMessage() {}
 
 func (x *CheckCommitReadinessResult_Mismatches) ProtoReflect() protoreflect.Message {
-	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[31]
+	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[33]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1786,6 +1875,117 @@ func (x *CheckCommitReadinessResult_Mismatches) GetItems() []string {
 	return nil
 }
 
+type QueryApprovedChaincodeDefinitionsResult_ApprovedChaincodeDefinition struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Name                string                        `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	Sequence            int64                         `protobuf:"varint,2,opt,name=sequence,proto3" json:"sequence,omitempty"`
+	Version             string                        `protobuf:"bytes,3,opt,name=version,proto3" json:"version,omitempty"`
+	EndorsementPlugin   string                        `protobuf:"bytes,4,opt,name=endorsement_plugin,json=endorsementPlugin,proto3" json:"endorsement_plugin,omitempty"`
+	ValidationPlugin    string                        `protobuf:"bytes,5,opt,name=validation_plugin,json=validationPlugin,proto3" json:"validation_plugin,omitempty"`
+	ValidationParameter []byte                        `protobuf:"bytes,6,opt,name=validation_parameter,json=validationParameter,proto3" json:"validation_parameter,omitempty"`
+	Collections         *peer.CollectionConfigPackage `protobuf:"bytes,7,opt,name=collections,proto3" json:"collections,omitempty"`
+	InitRequired        bool                          `protobuf:"varint,8,opt,name=init_required,json=initRequired,proto3" json:"init_required,omitempty"`
+	Source              *ChaincodeSource              `protobuf:"bytes,9,opt,name=source,proto3" json:"source,omitempty"`
+}
+
+func (x *QueryApprovedChaincodeDefinitionsResult_ApprovedChaincodeDefinition) Reset() {
+	*x = QueryApprovedChaincodeDefinitionsResult_ApprovedChaincodeDefinition{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[35]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *QueryApprovedChaincodeDefinitionsResult_ApprovedChaincodeDefinition) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*QueryApprovedChaincodeDefinitionsResult_ApprovedChaincodeDefinition) ProtoMessage() {}
+
+func (x *QueryApprovedChaincodeDefinitionsResult_ApprovedChaincodeDefinition) ProtoReflect() protoreflect.Message {
+	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[35]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use QueryApprovedChaincodeDefinitionsResult_ApprovedChaincodeDefinition.ProtoReflect.Descriptor instead.
+func (*QueryApprovedChaincodeDefinitionsResult_ApprovedChaincodeDefinition) Descriptor() ([]byte, []int) {
+	return file_peer_lifecycle_lifecycle_proto_rawDescGZIP(), []int{18, 0}
+}
+
+func (x *QueryApprovedChaincodeDefinitionsResult_ApprovedChaincodeDefinition) GetName() string {
+	if x != nil {
+		return x.Name
+	}
+	return ""
+}
+
+func (x *QueryApprovedChaincodeDefinitionsResult_ApprovedChaincodeDefinition) GetSequence() int64 {
+	if x != nil {
+		return x.Sequence
+	}
+	return 0
+}
+
+func (x *QueryApprovedChaincodeDefinitionsResult_ApprovedChaincodeDefinition) GetVersion() string {
+	if x != nil {
+		return x.Version
+	}
+	return ""
+}
+
+func (x *QueryApprovedChaincodeDefinitionsResult_ApprovedChaincodeDefinition) GetEndorsementPlugin() string {
+	if x != nil {
+		return x.EndorsementPlugin
+	}
+	return ""
+}
+
+func (x *QueryApprovedChaincodeDefinitionsResult_ApprovedChaincodeDefinition) GetValidationPlugin() string {
+	if x != nil {
+		return x.ValidationPlugin
+	}
+	return ""
+}
+
+func (x *QueryApprovedChaincodeDefinitionsResult_ApprovedChaincodeDefinition) GetValidationParameter() []byte {
+	if x != nil {
+		return x.ValidationParameter
+	}
+	return nil
+}
+
+func (x *QueryApprovedChaincodeDefinitionsResult_ApprovedChaincodeDefinition) GetCollections() *peer.CollectionConfigPackage {
+	if x != nil {
+		return x.Collections
+	}
+	return nil
+}
+
+func (x *QueryApprovedChaincodeDefinitionsResult_ApprovedChaincodeDefinition) GetInitRequired() bool {
+	if x != nil {
+		return x.InitRequired
+	}
+	return false
+}
+
+func (x *QueryApprovedChaincodeDefinitionsResult_ApprovedChaincodeDefinition) GetSource() *ChaincodeSource {
+	if x != nil {
+		return x.Source
+	}
+	return nil
+}
+
 type QueryChaincodeDefinitionsResult_ChaincodeDefinition struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1804,7 +2004,7 @@ type QueryChaincodeDefinitionsResult_ChaincodeDefinition struct {
 func (x *QueryChaincodeDefinitionsResult_ChaincodeDefinition) Reset() {
 	*x = QueryChaincodeDefinitionsResult_ChaincodeDefinition{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[34]
+		mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[37]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1817,7 +2017,7 @@ func (x *QueryChaincodeDefinitionsResult_ChaincodeDefinition) String() string {
 func (*QueryChaincodeDefinitionsResult_ChaincodeDefinition) ProtoMessage() {}
 
 func (x *QueryChaincodeDefinitionsResult_ChaincodeDefinition) ProtoReflect() protoreflect.Message {
-	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[34]
+	mi := &file_peer_lifecycle_lifecycle_proto_msgTypes[37]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1830,7 +2030,7 @@ func (x *QueryChaincodeDefinitionsResult_ChaincodeDefinition) ProtoReflect() pro
 
 // Deprecated: Use QueryChaincodeDefinitionsResult_ChaincodeDefinition.ProtoReflect.Descriptor instead.
 func (*QueryChaincodeDefinitionsResult_ChaincodeDefinition) Descriptor() ([]byte, []int) {
-	return file_peer_lifecycle_lifecycle_proto_rawDescGZIP(), []int{20, 0}
+	return file_peer_lifecycle_lifecycle_proto_rawDescGZIP(), []int{22, 0}
 }
 
 func (x *QueryChaincodeDefinitionsResult_ChaincodeDefinition) GetName() string {
@@ -2134,52 +2334,22 @@ var file_peer_lifecycle_lifecycle_proto_rawDesc = []byte{
 	0x12, 0x32, 0x0a, 0x06, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x18, 0x08, 0x20, 0x01, 0x28, 0x0b,
 	0x32, 0x1a, 0x2e, 0x6c, 0x69, 0x66, 0x65, 0x63, 0x79, 0x63, 0x6c, 0x65, 0x2e, 0x43, 0x68, 0x61,
 	0x69, 0x6e, 0x63, 0x6f, 0x64, 0x65, 0x53, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x52, 0x06, 0x73, 0x6f,
-	0x75, 0x72, 0x63, 0x65, 0x22, 0x32, 0x0a, 0x1c, 0x51, 0x75, 0x65, 0x72, 0x79, 0x43, 0x68, 0x61,
-	0x69, 0x6e, 0x63, 0x6f, 0x64, 0x65, 0x44, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e,
-	0x41, 0x72, 0x67, 0x73, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x22, 0xe3, 0x03, 0x0a, 0x1e, 0x51, 0x75, 0x65,
-	0x72, 0x79, 0x43, 0x68, 0x61, 0x69, 0x6e, 0x63, 0x6f, 0x64, 0x65, 0x44, 0x65, 0x66, 0x69, 0x6e,
-	0x69, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x1a, 0x0a, 0x08, 0x73,
-	0x65, 0x71, 0x75, 0x65, 0x6e, 0x63, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x08, 0x73,
-	0x65, 0x71, 0x75, 0x65, 0x6e, 0x63, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x76, 0x65, 0x72, 0x73, 0x69,
-	0x6f, 0x6e, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x76, 0x65, 0x72, 0x73, 0x69, 0x6f,
-	0x6e, 0x12, 0x2d, 0x0a, 0x12, 0x65, 0x6e, 0x64, 0x6f, 0x72, 0x73, 0x65, 0x6d, 0x65, 0x6e, 0x74,
-	0x5f, 0x70, 0x6c, 0x75, 0x67, 0x69, 0x6e, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x11, 0x65,
-	0x6e, 0x64, 0x6f, 0x72, 0x73, 0x65, 0x6d, 0x65, 0x6e, 0x74, 0x50, 0x6c, 0x75, 0x67, 0x69, 0x6e,
-	0x12, 0x2b, 0x0a, 0x11, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x70,
-	0x6c, 0x75, 0x67, 0x69, 0x6e, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x10, 0x76, 0x61, 0x6c,
-	0x69, 0x64, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x50, 0x6c, 0x75, 0x67, 0x69, 0x6e, 0x12, 0x31, 0x0a,
-	0x14, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x70, 0x61, 0x72, 0x61,
-	0x6d, 0x65, 0x74, 0x65, 0x72, 0x18, 0x05, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x13, 0x76, 0x61, 0x6c,
-	0x69, 0x64, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x65, 0x74, 0x65, 0x72,
-	0x12, 0x41, 0x0a, 0x0b, 0x63, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x18,
-	0x06, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1f, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x73, 0x2e, 0x43,
-	0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x50,
-	0x61, 0x63, 0x6b, 0x61, 0x67, 0x65, 0x52, 0x0b, 0x63, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x69,
-	0x6f, 0x6e, 0x73, 0x12, 0x23, 0x0a, 0x0d, 0x69, 0x6e, 0x69, 0x74, 0x5f, 0x72, 0x65, 0x71, 0x75,
-	0x69, 0x72, 0x65, 0x64, 0x18, 0x07, 0x20, 0x01, 0x28, 0x08, 0x52, 0x0c, 0x69, 0x6e, 0x69, 0x74,
-	0x52, 0x65, 0x71, 0x75, 0x69, 0x72, 0x65, 0x64, 0x12, 0x56, 0x0a, 0x09, 0x61, 0x70, 0x70, 0x72,
-	0x6f, 0x76, 0x61, 0x6c, 0x73, 0x18, 0x08, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x38, 0x2e, 0x6c, 0x69,
-	0x66, 0x65, 0x63, 0x79, 0x63, 0x6c, 0x65, 0x2e, 0x51, 0x75, 0x65, 0x72, 0x79, 0x43, 0x68, 0x61,
-	0x69, 0x6e, 0x63, 0x6f, 0x64, 0x65, 0x44, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e,
-	0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x2e, 0x41, 0x70, 0x70, 0x72, 0x6f, 0x76, 0x61, 0x6c, 0x73,
-	0x45, 0x6e, 0x74, 0x72, 0x79, 0x52, 0x09, 0x61, 0x70, 0x70, 0x72, 0x6f, 0x76, 0x61, 0x6c, 0x73,
-	0x1a, 0x3c, 0x0a, 0x0e, 0x41, 0x70, 0x70, 0x72, 0x6f, 0x76, 0x61, 0x6c, 0x73, 0x45, 0x6e, 0x74,
-	0x72, 0x79, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
-	0x03, 0x6b, 0x65, 0x79, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x02, 0x20,
-	0x01, 0x28, 0x08, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x3a, 0x02, 0x38, 0x01, 0x22, 0x1f,
-	0x0a, 0x1d, 0x51, 0x75, 0x65, 0x72, 0x79, 0x43, 0x68, 0x61, 0x69, 0x6e, 0x63, 0x6f, 0x64, 0x65,
-	0x44, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x41, 0x72, 0x67, 0x73, 0x22,
-	0xef, 0x03, 0x0a, 0x1f, 0x51, 0x75, 0x65, 0x72, 0x79, 0x43, 0x68, 0x61, 0x69, 0x6e, 0x63, 0x6f,
-	0x64, 0x65, 0x44, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x73,
-	0x75, 0x6c, 0x74, 0x12, 0x73, 0x0a, 0x15, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x63, 0x6f, 0x64, 0x65,
-	0x5f, 0x64, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x18, 0x01, 0x20, 0x03,
-	0x28, 0x0b, 0x32, 0x3e, 0x2e, 0x6c, 0x69, 0x66, 0x65, 0x63, 0x79, 0x63, 0x6c, 0x65, 0x2e, 0x51,
-	0x75, 0x65, 0x72, 0x79, 0x43, 0x68, 0x61, 0x69, 0x6e, 0x63, 0x6f, 0x64, 0x65, 0x44, 0x65, 0x66,
-	0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x2e, 0x43,
+	0x75, 0x72, 0x63, 0x65, 0x22, 0x27, 0x0a, 0x25, 0x51, 0x75, 0x65, 0x72, 0x79, 0x41, 0x70, 0x70,
+	0x72, 0x6f, 0x76, 0x65, 0x64, 0x43, 0x68, 0x61, 0x69, 0x6e, 0x63, 0x6f, 0x64, 0x65, 0x44, 0x65,
+	0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x41, 0x72, 0x67, 0x73, 0x22, 0xd5, 0x04,
+	0x0a, 0x27, 0x51, 0x75, 0x65, 0x72, 0x79, 0x41, 0x70, 0x70, 0x72, 0x6f, 0x76, 0x65, 0x64, 0x43,
 	0x68, 0x61, 0x69, 0x6e, 0x63, 0x6f, 0x64, 0x65, 0x44, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69,
-	0x6f, 0x6e, 0x52, 0x14, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x63, 0x6f, 0x64, 0x65, 0x44, 0x65, 0x66,
-	0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x1a, 0xd6, 0x02, 0x0a, 0x13, 0x43, 0x68, 0x61,
+	0x6f, 0x6e, 0x73, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x94, 0x01, 0x0a, 0x1e, 0x61, 0x70,
+	0x70, 0x72, 0x6f, 0x76, 0x65, 0x64, 0x5f, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x63, 0x6f, 0x64, 0x65,
+	0x5f, 0x64, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x18, 0x01, 0x20, 0x03,
+	0x28, 0x0b, 0x32, 0x4e, 0x2e, 0x6c, 0x69, 0x66, 0x65, 0x63, 0x79, 0x63, 0x6c, 0x65, 0x2e, 0x51,
+	0x75, 0x65, 0x72, 0x79, 0x41, 0x70, 0x70, 0x72, 0x6f, 0x76, 0x65, 0x64, 0x43, 0x68, 0x61, 0x69,
+	0x6e, 0x63, 0x6f, 0x64, 0x65, 0x44, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x73,
+	0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x2e, 0x41, 0x70, 0x70, 0x72, 0x6f, 0x76, 0x65, 0x64, 0x43,
+	0x68, 0x61, 0x69, 0x6e, 0x63, 0x6f, 0x64, 0x65, 0x44, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69,
+	0x6f, 0x6e, 0x52, 0x1c, 0x61, 0x70, 0x70, 0x72, 0x6f, 0x76, 0x65, 0x64, 0x43, 0x68, 0x61, 0x69,
+	0x6e, 0x63, 0x6f, 0x64, 0x65, 0x44, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x73,
+	0x1a, 0x92, 0x03, 0x0a, 0x1b, 0x41, 0x70, 0x70, 0x72, 0x6f, 0x76, 0x65, 0x64, 0x43, 0x68, 0x61,
 	0x69, 0x6e, 0x63, 0x6f, 0x64, 0x65, 0x44, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e,
 	0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04,
 	0x6e, 0x61, 0x6d, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x73, 0x65, 0x71, 0x75, 0x65, 0x6e, 0x63, 0x65,
@@ -2201,19 +2371,89 @@ var file_peer_lifecycle_lifecycle_proto_rawDesc = []byte{
 	0x0b, 0x63, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x12, 0x23, 0x0a, 0x0d,
 	0x69, 0x6e, 0x69, 0x74, 0x5f, 0x72, 0x65, 0x71, 0x75, 0x69, 0x72, 0x65, 0x64, 0x18, 0x08, 0x20,
 	0x01, 0x28, 0x08, 0x52, 0x0c, 0x69, 0x6e, 0x69, 0x74, 0x52, 0x65, 0x71, 0x75, 0x69, 0x72, 0x65,
-	0x64, 0x42, 0xc0, 0x01, 0x0a, 0x2c, 0x6f, 0x72, 0x67, 0x2e, 0x68, 0x79, 0x70, 0x65, 0x72, 0x6c,
-	0x65, 0x64, 0x67, 0x65, 0x72, 0x2e, 0x66, 0x61, 0x62, 0x72, 0x69, 0x63, 0x2e, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x73, 0x2e, 0x70, 0x65, 0x65, 0x72, 0x2e, 0x6c, 0x69, 0x66, 0x65, 0x63, 0x79, 0x63,
-	0x6c, 0x65, 0x42, 0x0e, 0x4c, 0x69, 0x66, 0x65, 0x63, 0x79, 0x63, 0x6c, 0x65, 0x50, 0x72, 0x6f,
-	0x74, 0x6f, 0x50, 0x01, 0x5a, 0x3c, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d,
-	0x2f, 0x68, 0x79, 0x70, 0x65, 0x72, 0x6c, 0x65, 0x64, 0x67, 0x65, 0x72, 0x2f, 0x66, 0x61, 0x62,
-	0x72, 0x69, 0x63, 0x2d, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x73, 0x2d, 0x67, 0x6f, 0x2d, 0x61, 0x70,
-	0x69, 0x76, 0x32, 0x2f, 0x70, 0x65, 0x65, 0x72, 0x2f, 0x6c, 0x69, 0x66, 0x65, 0x63, 0x79, 0x63,
-	0x6c, 0x65, 0xa2, 0x02, 0x03, 0x4c, 0x58, 0x58, 0xaa, 0x02, 0x09, 0x4c, 0x69, 0x66, 0x65, 0x63,
-	0x79, 0x63, 0x6c, 0x65, 0xca, 0x02, 0x09, 0x4c, 0x69, 0x66, 0x65, 0x63, 0x79, 0x63, 0x6c, 0x65,
-	0xe2, 0x02, 0x15, 0x4c, 0x69, 0x66, 0x65, 0x63, 0x79, 0x63, 0x6c, 0x65, 0x5c, 0x47, 0x50, 0x42,
-	0x4d, 0x65, 0x74, 0x61, 0x64, 0x61, 0x74, 0x61, 0xea, 0x02, 0x09, 0x4c, 0x69, 0x66, 0x65, 0x63,
-	0x79, 0x63, 0x6c, 0x65, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x64, 0x12, 0x32, 0x0a, 0x06, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x18, 0x09, 0x20, 0x01, 0x28,
+	0x0b, 0x32, 0x1a, 0x2e, 0x6c, 0x69, 0x66, 0x65, 0x63, 0x79, 0x63, 0x6c, 0x65, 0x2e, 0x43, 0x68,
+	0x61, 0x69, 0x6e, 0x63, 0x6f, 0x64, 0x65, 0x53, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x52, 0x06, 0x73,
+	0x6f, 0x75, 0x72, 0x63, 0x65, 0x22, 0x32, 0x0a, 0x1c, 0x51, 0x75, 0x65, 0x72, 0x79, 0x43, 0x68,
+	0x61, 0x69, 0x6e, 0x63, 0x6f, 0x64, 0x65, 0x44, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f,
+	0x6e, 0x41, 0x72, 0x67, 0x73, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x22, 0xe3, 0x03, 0x0a, 0x1e, 0x51, 0x75,
+	0x65, 0x72, 0x79, 0x43, 0x68, 0x61, 0x69, 0x6e, 0x63, 0x6f, 0x64, 0x65, 0x44, 0x65, 0x66, 0x69,
+	0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x1a, 0x0a, 0x08,
+	0x73, 0x65, 0x71, 0x75, 0x65, 0x6e, 0x63, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x08,
+	0x73, 0x65, 0x71, 0x75, 0x65, 0x6e, 0x63, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x76, 0x65, 0x72, 0x73,
+	0x69, 0x6f, 0x6e, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x76, 0x65, 0x72, 0x73, 0x69,
+	0x6f, 0x6e, 0x12, 0x2d, 0x0a, 0x12, 0x65, 0x6e, 0x64, 0x6f, 0x72, 0x73, 0x65, 0x6d, 0x65, 0x6e,
+	0x74, 0x5f, 0x70, 0x6c, 0x75, 0x67, 0x69, 0x6e, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x11,
+	0x65, 0x6e, 0x64, 0x6f, 0x72, 0x73, 0x65, 0x6d, 0x65, 0x6e, 0x74, 0x50, 0x6c, 0x75, 0x67, 0x69,
+	0x6e, 0x12, 0x2b, 0x0a, 0x11, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f,
+	0x70, 0x6c, 0x75, 0x67, 0x69, 0x6e, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x10, 0x76, 0x61,
+	0x6c, 0x69, 0x64, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x50, 0x6c, 0x75, 0x67, 0x69, 0x6e, 0x12, 0x31,
+	0x0a, 0x14, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x70, 0x61, 0x72,
+	0x61, 0x6d, 0x65, 0x74, 0x65, 0x72, 0x18, 0x05, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x13, 0x76, 0x61,
+	0x6c, 0x69, 0x64, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x65, 0x74, 0x65,
+	0x72, 0x12, 0x41, 0x0a, 0x0b, 0x63, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73,
+	0x18, 0x06, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1f, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x73, 0x2e,
+	0x43, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67,
+	0x50, 0x61, 0x63, 0x6b, 0x61, 0x67, 0x65, 0x52, 0x0b, 0x63, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74,
+	0x69, 0x6f, 0x6e, 0x73, 0x12, 0x23, 0x0a, 0x0d, 0x69, 0x6e, 0x69, 0x74, 0x5f, 0x72, 0x65, 0x71,
+	0x75, 0x69, 0x72, 0x65, 0x64, 0x18, 0x07, 0x20, 0x01, 0x28, 0x08, 0x52, 0x0c, 0x69, 0x6e, 0x69,
+	0x74, 0x52, 0x65, 0x71, 0x75, 0x69, 0x72, 0x65, 0x64, 0x12, 0x56, 0x0a, 0x09, 0x61, 0x70, 0x70,
+	0x72, 0x6f, 0x76, 0x61, 0x6c, 0x73, 0x18, 0x08, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x38, 0x2e, 0x6c,
+	0x69, 0x66, 0x65, 0x63, 0x79, 0x63, 0x6c, 0x65, 0x2e, 0x51, 0x75, 0x65, 0x72, 0x79, 0x43, 0x68,
+	0x61, 0x69, 0x6e, 0x63, 0x6f, 0x64, 0x65, 0x44, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f,
+	0x6e, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x2e, 0x41, 0x70, 0x70, 0x72, 0x6f, 0x76, 0x61, 0x6c,
+	0x73, 0x45, 0x6e, 0x74, 0x72, 0x79, 0x52, 0x09, 0x61, 0x70, 0x70, 0x72, 0x6f, 0x76, 0x61, 0x6c,
+	0x73, 0x1a, 0x3c, 0x0a, 0x0e, 0x41, 0x70, 0x70, 0x72, 0x6f, 0x76, 0x61, 0x6c, 0x73, 0x45, 0x6e,
+	0x74, 0x72, 0x79, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x03, 0x6b, 0x65, 0x79, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x08, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x3a, 0x02, 0x38, 0x01, 0x22,
+	0x1f, 0x0a, 0x1d, 0x51, 0x75, 0x65, 0x72, 0x79, 0x43, 0x68, 0x61, 0x69, 0x6e, 0x63, 0x6f, 0x64,
+	0x65, 0x44, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x41, 0x72, 0x67, 0x73,
+	0x22, 0xef, 0x03, 0x0a, 0x1f, 0x51, 0x75, 0x65, 0x72, 0x79, 0x43, 0x68, 0x61, 0x69, 0x6e, 0x63,
+	0x6f, 0x64, 0x65, 0x44, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65,
+	0x73, 0x75, 0x6c, 0x74, 0x12, 0x73, 0x0a, 0x15, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x63, 0x6f, 0x64,
+	0x65, 0x5f, 0x64, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x18, 0x01, 0x20,
+	0x03, 0x28, 0x0b, 0x32, 0x3e, 0x2e, 0x6c, 0x69, 0x66, 0x65, 0x63, 0x79, 0x63, 0x6c, 0x65, 0x2e,
+	0x51, 0x75, 0x65, 0x72, 0x79, 0x43, 0x68, 0x61, 0x69, 0x6e, 0x63, 0x6f, 0x64, 0x65, 0x44, 0x65,
+	0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x2e,
+	0x43, 0x68, 0x61, 0x69, 0x6e, 0x63, 0x6f, 0x64, 0x65, 0x44, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74,
+	0x69, 0x6f, 0x6e, 0x52, 0x14, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x63, 0x6f, 0x64, 0x65, 0x44, 0x65,
+	0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x1a, 0xd6, 0x02, 0x0a, 0x13, 0x43, 0x68,
+	0x61, 0x69, 0x6e, 0x63, 0x6f, 0x64, 0x65, 0x44, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f,
+	0x6e, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x04, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x73, 0x65, 0x71, 0x75, 0x65, 0x6e, 0x63,
+	0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03, 0x52, 0x08, 0x73, 0x65, 0x71, 0x75, 0x65, 0x6e, 0x63,
+	0x65, 0x12, 0x18, 0x0a, 0x07, 0x76, 0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e, 0x18, 0x03, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x07, 0x76, 0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e, 0x12, 0x2d, 0x0a, 0x12, 0x65,
+	0x6e, 0x64, 0x6f, 0x72, 0x73, 0x65, 0x6d, 0x65, 0x6e, 0x74, 0x5f, 0x70, 0x6c, 0x75, 0x67, 0x69,
+	0x6e, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x11, 0x65, 0x6e, 0x64, 0x6f, 0x72, 0x73, 0x65,
+	0x6d, 0x65, 0x6e, 0x74, 0x50, 0x6c, 0x75, 0x67, 0x69, 0x6e, 0x12, 0x2b, 0x0a, 0x11, 0x76, 0x61,
+	0x6c, 0x69, 0x64, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x70, 0x6c, 0x75, 0x67, 0x69, 0x6e, 0x18,
+	0x05, 0x20, 0x01, 0x28, 0x09, 0x52, 0x10, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x61, 0x74, 0x69, 0x6f,
+	0x6e, 0x50, 0x6c, 0x75, 0x67, 0x69, 0x6e, 0x12, 0x31, 0x0a, 0x14, 0x76, 0x61, 0x6c, 0x69, 0x64,
+	0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x70, 0x61, 0x72, 0x61, 0x6d, 0x65, 0x74, 0x65, 0x72, 0x18,
+	0x06, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x13, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x61, 0x74, 0x69, 0x6f,
+	0x6e, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x65, 0x74, 0x65, 0x72, 0x12, 0x41, 0x0a, 0x0b, 0x63, 0x6f,
+	0x6c, 0x6c, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x18, 0x07, 0x20, 0x01, 0x28, 0x0b, 0x32,
+	0x1f, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x73, 0x2e, 0x43, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74,
+	0x69, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x50, 0x61, 0x63, 0x6b, 0x61, 0x67, 0x65,
+	0x52, 0x0b, 0x63, 0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x12, 0x23, 0x0a,
+	0x0d, 0x69, 0x6e, 0x69, 0x74, 0x5f, 0x72, 0x65, 0x71, 0x75, 0x69, 0x72, 0x65, 0x64, 0x18, 0x08,
+	0x20, 0x01, 0x28, 0x08, 0x52, 0x0c, 0x69, 0x6e, 0x69, 0x74, 0x52, 0x65, 0x71, 0x75, 0x69, 0x72,
+	0x65, 0x64, 0x42, 0xc0, 0x01, 0x0a, 0x2c, 0x6f, 0x72, 0x67, 0x2e, 0x68, 0x79, 0x70, 0x65, 0x72,
+	0x6c, 0x65, 0x64, 0x67, 0x65, 0x72, 0x2e, 0x66, 0x61, 0x62, 0x72, 0x69, 0x63, 0x2e, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x73, 0x2e, 0x70, 0x65, 0x65, 0x72, 0x2e, 0x6c, 0x69, 0x66, 0x65, 0x63, 0x79,
+	0x63, 0x6c, 0x65, 0x42, 0x0e, 0x4c, 0x69, 0x66, 0x65, 0x63, 0x79, 0x63, 0x6c, 0x65, 0x50, 0x72,
+	0x6f, 0x74, 0x6f, 0x50, 0x01, 0x5a, 0x3c, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f,
+	0x6d, 0x2f, 0x68, 0x79, 0x70, 0x65, 0x72, 0x6c, 0x65, 0x64, 0x67, 0x65, 0x72, 0x2f, 0x66, 0x61,
+	0x62, 0x72, 0x69, 0x63, 0x2d, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x73, 0x2d, 0x67, 0x6f, 0x2d, 0x61,
+	0x70, 0x69, 0x76, 0x32, 0x2f, 0x70, 0x65, 0x65, 0x72, 0x2f, 0x6c, 0x69, 0x66, 0x65, 0x63, 0x79,
+	0x63, 0x6c, 0x65, 0xa2, 0x02, 0x03, 0x4c, 0x58, 0x58, 0xaa, 0x02, 0x09, 0x4c, 0x69, 0x66, 0x65,
+	0x63, 0x79, 0x63, 0x6c, 0x65, 0xca, 0x02, 0x09, 0x4c, 0x69, 0x66, 0x65, 0x63, 0x79, 0x63, 0x6c,
+	0x65, 0xe2, 0x02, 0x15, 0x4c, 0x69, 0x66, 0x65, 0x63, 0x79, 0x63, 0x6c, 0x65, 0x5c, 0x47, 0x50,
+	0x42, 0x4d, 0x65, 0x74, 0x61, 0x64, 0x61, 0x74, 0x61, 0xea, 0x02, 0x09, 0x4c, 0x69, 0x66, 0x65,
+	0x63, 0x79, 0x63, 0x6c, 0x65, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -2228,7 +2468,7 @@ func file_peer_lifecycle_lifecycle_proto_rawDescGZIP() []byte {
 	return file_peer_lifecycle_lifecycle_proto_rawDescData
 }
 
-var file_peer_lifecycle_lifecycle_proto_msgTypes = make([]protoimpl.MessageInfo, 35)
+var file_peer_lifecycle_lifecycle_proto_msgTypes = make([]protoimpl.MessageInfo, 38)
 var file_peer_lifecycle_lifecycle_proto_goTypes = []interface{}{
 	(*InstallChaincodeArgs)(nil),                              // 0: lifecycle.InstallChaincodeArgs
 	(*InstallChaincodeResult)(nil),                            // 1: lifecycle.InstallChaincodeResult
@@ -2247,54 +2487,60 @@ var file_peer_lifecycle_lifecycle_proto_goTypes = []interface{}{
 	(*CheckCommitReadinessResult)(nil),                        // 14: lifecycle.CheckCommitReadinessResult
 	(*QueryApprovedChaincodeDefinitionArgs)(nil),              // 15: lifecycle.QueryApprovedChaincodeDefinitionArgs
 	(*QueryApprovedChaincodeDefinitionResult)(nil),            // 16: lifecycle.QueryApprovedChaincodeDefinitionResult
-	(*QueryChaincodeDefinitionArgs)(nil),                      // 17: lifecycle.QueryChaincodeDefinitionArgs
-	(*QueryChaincodeDefinitionResult)(nil),                    // 18: lifecycle.QueryChaincodeDefinitionResult
-	(*QueryChaincodeDefinitionsArgs)(nil),                     // 19: lifecycle.QueryChaincodeDefinitionsArgs
-	(*QueryChaincodeDefinitionsResult)(nil),                   // 20: lifecycle.QueryChaincodeDefinitionsResult
-	nil,                                                       // 21: lifecycle.QueryInstalledChaincodeResult.ReferencesEntry
-	(*QueryInstalledChaincodeResult_References)(nil),          // 22: lifecycle.QueryInstalledChaincodeResult.References
-	(*QueryInstalledChaincodeResult_Chaincode)(nil),           // 23: lifecycle.QueryInstalledChaincodeResult.Chaincode
-	(*QueryInstalledChaincodesResult_InstalledChaincode)(nil), // 24: lifecycle.QueryInstalledChaincodesResult.InstalledChaincode
-	(*QueryInstalledChaincodesResult_References)(nil),         // 25: lifecycle.QueryInstalledChaincodesResult.References
-	(*QueryInstalledChaincodesResult_Chaincode)(nil),          // 26: lifecycle.QueryInstalledChaincodesResult.Chaincode
-	nil,                                 // 27: lifecycle.QueryInstalledChaincodesResult.InstalledChaincode.ReferencesEntry
-	(*ChaincodeSource_Unavailable)(nil), // 28: lifecycle.ChaincodeSource.Unavailable
-	(*ChaincodeSource_Local)(nil),       // 29: lifecycle.ChaincodeSource.Local
-	nil,                                 // 30: lifecycle.CheckCommitReadinessResult.ApprovalsEntry
-	(*CheckCommitReadinessResult_Mismatches)(nil), // 31: lifecycle.CheckCommitReadinessResult.Mismatches
-	nil, // 32: lifecycle.CheckCommitReadinessResult.MismatchesEntry
-	nil, // 33: lifecycle.QueryChaincodeDefinitionResult.ApprovalsEntry
-	(*QueryChaincodeDefinitionsResult_ChaincodeDefinition)(nil), // 34: lifecycle.QueryChaincodeDefinitionsResult.ChaincodeDefinition
-	(*peer.CollectionConfigPackage)(nil),                        // 35: protos.CollectionConfigPackage
+	(*QueryApprovedChaincodeDefinitionsArgs)(nil),             // 17: lifecycle.QueryApprovedChaincodeDefinitionsArgs
+	(*QueryApprovedChaincodeDefinitionsResult)(nil),           // 18: lifecycle.QueryApprovedChaincodeDefinitionsResult
+	(*QueryChaincodeDefinitionArgs)(nil),                      // 19: lifecycle.QueryChaincodeDefinitionArgs
+	(*QueryChaincodeDefinitionResult)(nil),                    // 20: lifecycle.QueryChaincodeDefinitionResult
+	(*QueryChaincodeDefinitionsArgs)(nil),                     // 21: lifecycle.QueryChaincodeDefinitionsArgs
+	(*QueryChaincodeDefinitionsResult)(nil),                   // 22: lifecycle.QueryChaincodeDefinitionsResult
+	nil,                                                       // 23: lifecycle.QueryInstalledChaincodeResult.ReferencesEntry
+	(*QueryInstalledChaincodeResult_References)(nil),          // 24: lifecycle.QueryInstalledChaincodeResult.References
+	(*QueryInstalledChaincodeResult_Chaincode)(nil),           // 25: lifecycle.QueryInstalledChaincodeResult.Chaincode
+	(*QueryInstalledChaincodesResult_InstalledChaincode)(nil), // 26: lifecycle.QueryInstalledChaincodesResult.InstalledChaincode
+	(*QueryInstalledChaincodesResult_References)(nil),         // 27: lifecycle.QueryInstalledChaincodesResult.References
+	(*QueryInstalledChaincodesResult_Chaincode)(nil),          // 28: lifecycle.QueryInstalledChaincodesResult.Chaincode
+	nil,                                 // 29: lifecycle.QueryInstalledChaincodesResult.InstalledChaincode.ReferencesEntry
+	(*ChaincodeSource_Unavailable)(nil), // 30: lifecycle.ChaincodeSource.Unavailable
+	(*ChaincodeSource_Local)(nil),       // 31: lifecycle.ChaincodeSource.Local
+	nil,                                 // 32: lifecycle.CheckCommitReadinessResult.ApprovalsEntry
+	(*CheckCommitReadinessResult_Mismatches)(nil), // 33: lifecycle.CheckCommitReadinessResult.Mismatches
+	nil, // 34: lifecycle.CheckCommitReadinessResult.MismatchesEntry
+	(*QueryApprovedChaincodeDefinitionsResult_ApprovedChaincodeDefinition)(nil), // 35: lifecycle.QueryApprovedChaincodeDefinitionsResult.ApprovedChaincodeDefinition
+	nil, // 36: lifecycle.QueryChaincodeDefinitionResult.ApprovalsEntry
+	(*QueryChaincodeDefinitionsResult_ChaincodeDefinition)(nil), // 37: lifecycle.QueryChaincodeDefinitionsResult.ChaincodeDefinition
+	(*peer.CollectionConfigPackage)(nil),                        // 38: protos.CollectionConfigPackage
 }
 var file_peer_lifecycle_lifecycle_proto_depIdxs = []int32{
-	21, // 0: lifecycle.QueryInstalledChaincodeResult.references:type_name -> lifecycle.QueryInstalledChaincodeResult.ReferencesEntry
-	24, // 1: lifecycle.QueryInstalledChaincodesResult.installed_chaincodes:type_name -> lifecycle.QueryInstalledChaincodesResult.InstalledChaincode
-	35, // 2: lifecycle.ApproveChaincodeDefinitionForMyOrgArgs.collections:type_name -> protos.CollectionConfigPackage
+	23, // 0: lifecycle.QueryInstalledChaincodeResult.references:type_name -> lifecycle.QueryInstalledChaincodeResult.ReferencesEntry
+	26, // 1: lifecycle.QueryInstalledChaincodesResult.installed_chaincodes:type_name -> lifecycle.QueryInstalledChaincodesResult.InstalledChaincode
+	38, // 2: lifecycle.ApproveChaincodeDefinitionForMyOrgArgs.collections:type_name -> protos.CollectionConfigPackage
 	9,  // 3: lifecycle.ApproveChaincodeDefinitionForMyOrgArgs.source:type_name -> lifecycle.ChaincodeSource
-	28, // 4: lifecycle.ChaincodeSource.unavailable:type_name -> lifecycle.ChaincodeSource.Unavailable
-	29, // 5: lifecycle.ChaincodeSource.local_package:type_name -> lifecycle.ChaincodeSource.Local
-	35, // 6: lifecycle.CommitChaincodeDefinitionArgs.collections:type_name -> protos.CollectionConfigPackage
-	35, // 7: lifecycle.CheckCommitReadinessArgs.collections:type_name -> protos.CollectionConfigPackage
-	30, // 8: lifecycle.CheckCommitReadinessResult.approvals:type_name -> lifecycle.CheckCommitReadinessResult.ApprovalsEntry
-	32, // 9: lifecycle.CheckCommitReadinessResult.mismatches:type_name -> lifecycle.CheckCommitReadinessResult.MismatchesEntry
-	35, // 10: lifecycle.QueryApprovedChaincodeDefinitionResult.collections:type_name -> protos.CollectionConfigPackage
+	30, // 4: lifecycle.ChaincodeSource.unavailable:type_name -> lifecycle.ChaincodeSource.Unavailable
+	31, // 5: lifecycle.ChaincodeSource.local_package:type_name -> lifecycle.ChaincodeSource.Local
+	38, // 6: lifecycle.CommitChaincodeDefinitionArgs.collections:type_name -> protos.CollectionConfigPackage
+	38, // 7: lifecycle.CheckCommitReadinessArgs.collections:type_name -> protos.CollectionConfigPackage
+	32, // 8: lifecycle.CheckCommitReadinessResult.approvals:type_name -> lifecycle.CheckCommitReadinessResult.ApprovalsEntry
+	34, // 9: lifecycle.CheckCommitReadinessResult.mismatches:type_name -> lifecycle.CheckCommitReadinessResult.MismatchesEntry
+	38, // 10: lifecycle.QueryApprovedChaincodeDefinitionResult.collections:type_name -> protos.CollectionConfigPackage
 	9,  // 11: lifecycle.QueryApprovedChaincodeDefinitionResult.source:type_name -> lifecycle.ChaincodeSource
-	35, // 12: lifecycle.QueryChaincodeDefinitionResult.collections:type_name -> protos.CollectionConfigPackage
-	33, // 13: lifecycle.QueryChaincodeDefinitionResult.approvals:type_name -> lifecycle.QueryChaincodeDefinitionResult.ApprovalsEntry
-	34, // 14: lifecycle.QueryChaincodeDefinitionsResult.chaincode_definitions:type_name -> lifecycle.QueryChaincodeDefinitionsResult.ChaincodeDefinition
-	22, // 15: lifecycle.QueryInstalledChaincodeResult.ReferencesEntry.value:type_name -> lifecycle.QueryInstalledChaincodeResult.References
-	23, // 16: lifecycle.QueryInstalledChaincodeResult.References.chaincodes:type_name -> lifecycle.QueryInstalledChaincodeResult.Chaincode
-	27, // 17: lifecycle.QueryInstalledChaincodesResult.InstalledChaincode.references:type_name -> lifecycle.QueryInstalledChaincodesResult.InstalledChaincode.ReferencesEntry
-	26, // 18: lifecycle.QueryInstalledChaincodesResult.References.chaincodes:type_name -> lifecycle.QueryInstalledChaincodesResult.Chaincode
-	25, // 19: lifecycle.QueryInstalledChaincodesResult.InstalledChaincode.ReferencesEntry.value:type_name -> lifecycle.QueryInstalledChaincodesResult.References
-	31, // 20: lifecycle.CheckCommitReadinessResult.MismatchesEntry.value:type_name -> lifecycle.CheckCommitReadinessResult.Mismatches
-	35, // 21: lifecycle.QueryChaincodeDefinitionsResult.ChaincodeDefinition.collections:type_name -> protos.CollectionConfigPackage
-	22, // [22:22] is the sub-list for method output_type
-	22, // [22:22] is the sub-list for method input_type
-	22, // [22:22] is the sub-list for extension type_name
-	22, // [22:22] is the sub-list for extension extendee
-	0,  // [0:22] is the sub-list for field type_name
+	35, // 12: lifecycle.QueryApprovedChaincodeDefinitionsResult.approved_chaincode_definitions:type_name -> lifecycle.QueryApprovedChaincodeDefinitionsResult.ApprovedChaincodeDefinition
+	38, // 13: lifecycle.QueryChaincodeDefinitionResult.collections:type_name -> protos.CollectionConfigPackage
+	36, // 14: lifecycle.QueryChaincodeDefinitionResult.approvals:type_name -> lifecycle.QueryChaincodeDefinitionResult.ApprovalsEntry
+	37, // 15: lifecycle.QueryChaincodeDefinitionsResult.chaincode_definitions:type_name -> lifecycle.QueryChaincodeDefinitionsResult.ChaincodeDefinition
+	24, // 16: lifecycle.QueryInstalledChaincodeResult.ReferencesEntry.value:type_name -> lifecycle.QueryInstalledChaincodeResult.References
+	25, // 17: lifecycle.QueryInstalledChaincodeResult.References.chaincodes:type_name -> lifecycle.QueryInstalledChaincodeResult.Chaincode
+	29, // 18: lifecycle.QueryInstalledChaincodesResult.InstalledChaincode.references:type_name -> lifecycle.QueryInstalledChaincodesResult.InstalledChaincode.ReferencesEntry
+	28, // 19: lifecycle.QueryInstalledChaincodesResult.References.chaincodes:type_name -> lifecycle.QueryInstalledChaincodesResult.Chaincode
+	27, // 20: lifecycle.QueryInstalledChaincodesResult.InstalledChaincode.ReferencesEntry.value:type_name -> lifecycle.QueryInstalledChaincodesResult.References
+	33, // 21: lifecycle.CheckCommitReadinessResult.MismatchesEntry.value:type_name -> lifecycle.CheckCommitReadinessResult.Mismatches
+	38, // 22: lifecycle.QueryApprovedChaincodeDefinitionsResult.ApprovedChaincodeDefinition.collections:type_name -> protos.CollectionConfigPackage
+	9,  // 23: lifecycle.QueryApprovedChaincodeDefinitionsResult.ApprovedChaincodeDefinition.source:type_name -> lifecycle.ChaincodeSource
+	38, // 24: lifecycle.QueryChaincodeDefinitionsResult.ChaincodeDefinition.collections:type_name -> protos.CollectionConfigPackage
+	25, // [25:25] is the sub-list for method output_type
+	25, // [25:25] is the sub-list for method input_type
+	25, // [25:25] is the sub-list for extension type_name
+	25, // [25:25] is the sub-list for extension extendee
+	0,  // [0:25] is the sub-list for field type_name
 }
 
 func init() { file_peer_lifecycle_lifecycle_proto_init() }
@@ -2508,7 +2754,7 @@ func file_peer_lifecycle_lifecycle_proto_init() {
 			}
 		}
 		file_peer_lifecycle_lifecycle_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*QueryChaincodeDefinitionArgs); i {
+			switch v := v.(*QueryApprovedChaincodeDefinitionsArgs); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2520,7 +2766,7 @@ func file_peer_lifecycle_lifecycle_proto_init() {
 			}
 		}
 		file_peer_lifecycle_lifecycle_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*QueryChaincodeDefinitionResult); i {
+			switch v := v.(*QueryApprovedChaincodeDefinitionsResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2532,7 +2778,7 @@ func file_peer_lifecycle_lifecycle_proto_init() {
 			}
 		}
 		file_peer_lifecycle_lifecycle_proto_msgTypes[19].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*QueryChaincodeDefinitionsArgs); i {
+			switch v := v.(*QueryChaincodeDefinitionArgs); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2544,7 +2790,19 @@ func file_peer_lifecycle_lifecycle_proto_init() {
 			}
 		}
 		file_peer_lifecycle_lifecycle_proto_msgTypes[20].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*QueryChaincodeDefinitionsResult); i {
+			switch v := v.(*QueryChaincodeDefinitionResult); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_peer_lifecycle_lifecycle_proto_msgTypes[21].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*QueryChaincodeDefinitionsArgs); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2556,19 +2814,7 @@ func file_peer_lifecycle_lifecycle_proto_init() {
 			}
 		}
 		file_peer_lifecycle_lifecycle_proto_msgTypes[22].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*QueryInstalledChaincodeResult_References); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_peer_lifecycle_lifecycle_proto_msgTypes[23].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*QueryInstalledChaincodeResult_Chaincode); i {
+			switch v := v.(*QueryChaincodeDefinitionsResult); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2580,7 +2826,7 @@ func file_peer_lifecycle_lifecycle_proto_init() {
 			}
 		}
 		file_peer_lifecycle_lifecycle_proto_msgTypes[24].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*QueryInstalledChaincodesResult_InstalledChaincode); i {
+			switch v := v.(*QueryInstalledChaincodeResult_References); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2592,7 +2838,7 @@ func file_peer_lifecycle_lifecycle_proto_init() {
 			}
 		}
 		file_peer_lifecycle_lifecycle_proto_msgTypes[25].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*QueryInstalledChaincodesResult_References); i {
+			switch v := v.(*QueryInstalledChaincodeResult_Chaincode); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2604,7 +2850,19 @@ func file_peer_lifecycle_lifecycle_proto_init() {
 			}
 		}
 		file_peer_lifecycle_lifecycle_proto_msgTypes[26].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*QueryInstalledChaincodesResult_Chaincode); i {
+			switch v := v.(*QueryInstalledChaincodesResult_InstalledChaincode); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_peer_lifecycle_lifecycle_proto_msgTypes[27].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*QueryInstalledChaincodesResult_References); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2616,6 +2874,18 @@ func file_peer_lifecycle_lifecycle_proto_init() {
 			}
 		}
 		file_peer_lifecycle_lifecycle_proto_msgTypes[28].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*QueryInstalledChaincodesResult_Chaincode); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_peer_lifecycle_lifecycle_proto_msgTypes[30].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ChaincodeSource_Unavailable); i {
 			case 0:
 				return &v.state
@@ -2627,7 +2897,7 @@ func file_peer_lifecycle_lifecycle_proto_init() {
 				return nil
 			}
 		}
-		file_peer_lifecycle_lifecycle_proto_msgTypes[29].Exporter = func(v interface{}, i int) interface{} {
+		file_peer_lifecycle_lifecycle_proto_msgTypes[31].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ChaincodeSource_Local); i {
 			case 0:
 				return &v.state
@@ -2639,7 +2909,7 @@ func file_peer_lifecycle_lifecycle_proto_init() {
 				return nil
 			}
 		}
-		file_peer_lifecycle_lifecycle_proto_msgTypes[31].Exporter = func(v interface{}, i int) interface{} {
+		file_peer_lifecycle_lifecycle_proto_msgTypes[33].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CheckCommitReadinessResult_Mismatches); i {
 			case 0:
 				return &v.state
@@ -2651,7 +2921,19 @@ func file_peer_lifecycle_lifecycle_proto_init() {
 				return nil
 			}
 		}
-		file_peer_lifecycle_lifecycle_proto_msgTypes[34].Exporter = func(v interface{}, i int) interface{} {
+		file_peer_lifecycle_lifecycle_proto_msgTypes[35].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*QueryApprovedChaincodeDefinitionsResult_ApprovedChaincodeDefinition); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_peer_lifecycle_lifecycle_proto_msgTypes[37].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*QueryChaincodeDefinitionsResult_ChaincodeDefinition); i {
 			case 0:
 				return &v.state
@@ -2674,7 +2956,7 @@ func file_peer_lifecycle_lifecycle_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_peer_lifecycle_lifecycle_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   35,
+			NumMessages:   38,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
