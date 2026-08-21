@@ -33,7 +33,6 @@ type ClusterNodeServiceStepRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Payload:
-	//
 	//	*ClusterNodeServiceStepRequest_NodeConrequest
 	//	*ClusterNodeServiceStepRequest_NodeTranrequest
 	//	*ClusterNodeServiceStepRequest_NodeAuthrequest
@@ -132,7 +131,6 @@ type ClusterNodeServiceStepResponse struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Payload:
-	//
 	//	*ClusterNodeServiceStepResponse_TranorderRes
 	Payload isClusterNodeServiceStepResponse_Payload `protobuf_oneof:"payload"`
 }

@@ -270,7 +270,6 @@ type Query struct {
 
 	Channel string `protobuf:"bytes,1,opt,name=channel,proto3" json:"channel,omitempty"`
 	// Types that are assignable to Query:
-	//
 	//	*Query_ConfigQuery
 	//	*Query_PeerQuery
 	//	*Query_CcQuery
@@ -401,7 +400,6 @@ type QueryResult struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Result:
-	//
 	//	*QueryResult_Error
 	//	*QueryResult_ConfigResult
 	//	*QueryResult_CcQueryRes

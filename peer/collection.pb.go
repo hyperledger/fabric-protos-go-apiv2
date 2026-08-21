@@ -84,7 +84,6 @@ type CollectionConfig struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Payload:
-	//
 	//	*CollectionConfig_StaticCollectionConfig
 	Payload isCollectionConfig_Payload `protobuf_oneof:"payload"`
 }
@@ -283,7 +282,6 @@ type CollectionPolicyConfig struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Payload:
-	//
 	//	*CollectionPolicyConfig_SignaturePolicy
 	Payload isCollectionPolicyConfig_Payload `protobuf_oneof:"payload"`
 }

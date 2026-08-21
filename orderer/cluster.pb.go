@@ -32,7 +32,6 @@ type StepRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Payload:
-	//
 	//	*StepRequest_ConsensusRequest
 	//	*StepRequest_SubmitRequest
 	Payload isStepRequest_Payload `protobuf_oneof:"payload"`
@@ -116,7 +115,6 @@ type StepResponse struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Payload:
-	//
 	//	*StepResponse_SubmitRes
 	Payload isStepResponse_Payload `protobuf_oneof:"payload"`
 }
